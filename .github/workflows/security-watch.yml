@@ -23,7 +23,8 @@ jobs:
       - run: node scripts/security-watch.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SITE_URL: https://baseeratactions.github.io/munjiz/
+          # the live Munjiz site is munjiz-qa.github.io, watched in its own repo; this older copy is not published on Pages
+          SITE_URL: ''
           OWNER_LOGIN: baseeratactions
           ALERT_TELEGRAM: ${{ vars.ALERT_TELEGRAM || '@mabouelezz2022' }}
           ALLOWED_EMAILS: ${{ vars.ALLOWED_EMAILS }}
